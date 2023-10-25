@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node api/index.js",
-    "dev" : "nodemon indes.js"
+    "dev" : "nodemon api/index.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.429.0",
