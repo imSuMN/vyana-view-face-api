@@ -1,14 +1,16 @@
 require("dotenv").config();
 
 const express = require("express");
-const multer = require("multer");
+
 const cors = require("cors");
 
-const { s3Client } = require("./config");
+const { s3Client } = require("../config");
 const { ListObjectsV2Command } = require("@aws-sdk/client-s3");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+
 
 app.get("/", (req, res) => {
   res.send("Api Running...");
